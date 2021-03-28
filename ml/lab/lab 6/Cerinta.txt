@@ -1,0 +1,44 @@
+IMPORTANT: Deschideti cu Notepad++ sau Wordpad (pe Windows) si cu TextEdit (pe Mac OS).
+
+In arhiva veti gasi fisierul 'train.pkl'. Puteti incarca datele de antrenare si testare din din acest fisier pornind de la urmatorul cod:
+
+import numpy as np
+import pickle
+
+train_data, train_labels, test_data = pickle.load(
+    open('./train.pkl', 'rb')
+)
+
+Scopul este de a obtine o performanta cat mai buna pe datele de testare folosind o retea neurala. Pentru gasirea parametrilor optimi, puteti imparti setul de antrenare in doua parti, una pentru antrenare si alta pentru validare.
+
+Rezolvarea consta in:
+a) Cel mult 3 submisii pentru setul de testare. O submisie consta intr-un fisier txt denumit {Nume}_{Prenume}_{Grupa}_solutia_{i}.txt unde i este numarul submisiei (1, 2 sau 3) in care pe fiecare linie sa afla predictia pentru cate un exemplu de test. Fisierul va avea in consecinta 50 de linii cu cate un numar, 0 sau 1, aferent celor 50 de exemple de test.
+
+Exemplu submisie:
+Creanga_Ion_123_solutie_1.txt
+1
+0
+1
+1
+0
+...
+
+b) Codul aferent pentru antrenarea modelului si obtinerea solutiilor trimise. Pentru fiecare submisie, codul trebuie organizat intr-un singur fisier .py denumit astfel:
+Creanga_Ion_123_solutie_1.py
+
+c) Un raport al experimentelor insotit de evaluarea pe un set de validare a diferite combinatii de hiperparametrii / normalizari / preprocesari.
+
+Punctaj:
+- pentru punctele a) si b), punctajul oferit este in functie de performanta celei mai bune submisii pe setul de test:
+2 puncte: peste 60% acuratete
+3 puncte: peste 65% acuratete
+4 puncte: peste 70% acuratete
+5 puncte: peste 74% acuratete
+6 puncte: peste 80% acuratete
+
+Observatie: pentru obtinerea punctajului la a) si b) este obligatoriu ca solutia sa contina cod fara erori de compilare / run time.
+
+- pentru punctul c) se acorda 3 puncte.
+- oficiu: 1 punct. 
+
+
