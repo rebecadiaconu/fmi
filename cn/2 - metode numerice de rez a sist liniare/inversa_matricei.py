@@ -60,7 +60,7 @@ B = np.array([[0., 3., -8., -1.],
               [-4., -10., -1., -8.],
               [-6., -7., -6., 6.]])
 
-if np.linalg.det(B) > 1e-15:
+if np.linalg.det(B) < 1e-15:
     print("Matricea nu este inversabila!")
     exit(1)
 
